@@ -1,9 +1,11 @@
 print("Thanks you for using our PHM Client!")
 
 if IY_LOADED and not _G.IY_DEBUG == true then
-    -- error("Infinite Yield is already running!", 0)
+    -- error("Client is already running!", 0)
     return
 end
+
+print("PHM Client Loaded!")
 
 pcall(function() getgenv().IY_LOADED = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
@@ -92,7 +94,7 @@ local iyassets = {
     ["infiniteyield/assets/edittheme.png"] = "rbxassetid://4911962991",
     ["infiniteyield/assets/editwaypoints.png"] = "rbxassetid://5147488592",
     ["infiniteyield/assets/imgstudiopluginlogo.png"] = "rbxassetid://4113050383",
-    ["infiniteyield/assets/logo.png"] = "rbxassetid://1352543873",
+    ["infiniteyield/assets/logo.png"] = "rbxassetid://107692160129194",
     ["infiniteyield/assets/minimize.png"] = "rbxassetid://2406617031",
     ["infiniteyield/assets/pin.png"] = "rbxassetid://6234691350",
     ["infiniteyield/assets/reference.png"] = "rbxassetid://3523243755",
@@ -13052,5 +13054,5 @@ task.spawn(function()
 	Credits:Destroy()
 	IntroBackground:Destroy()
 	minimizeHolder()
-	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
+	if IsOnMobile then notify("Unstable Device", "On mobile, This Client may have issues or features that are not functioning correctly.") end
 end)
